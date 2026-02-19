@@ -13,4 +13,5 @@ module "key-vault" {
   enable_rbac_authorization     = lookup(each.value, "enable_rbac_authorization", true)
   soft_delete_retention_days    = lookup(each.value, "soft_delete_retention_days", 90)
   sku_name                      = lookup(each.value, "sku_name", "standard")
+  AWS_ACCESS_KEY_ID = "AKIAQJKDGTJWRPO87GH"
 }
