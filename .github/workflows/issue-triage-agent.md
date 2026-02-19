@@ -15,7 +15,7 @@ safe-outputs:
     - question
     - help-wanted
     - good-first-issue
-source: github/gh-aw/.github/workflows/issue-triage-agent.md@852cb06ad52958b402ed982b69957ffc57ca0619
+source: .github/workflows/issue-triage-agent.md@852cb06ad52958b402ed982b69957ffc57ca0619
 strict: true
 timeout-minutes: 5
 tools:
