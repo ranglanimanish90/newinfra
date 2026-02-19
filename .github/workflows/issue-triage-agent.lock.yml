@@ -24,7 +24,7 @@
 #
 # Source: github/gh-aw/.github/workflows/issue-triage-agent.md@852cb06ad52958b402ed982b69957ffc57ca0619
 #
-# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"81553944e1cceff3c198309e8ea88559a4e02a6953fffc9e4f202b175ae4b5aa"}
+# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"12ec30300604e6a939697c11fe87a1357b366323fba47685f51d8752860a7425"}
 
 name: "Issue Triage Agent"
 "on":
