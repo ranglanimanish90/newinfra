@@ -4,9 +4,9 @@ on:
   workflow_dispatch: null
 permissions:
   issues: read
-imports:
-- github/gh-aw/.github/workflows/shared/mood.md@852cb06ad52958b402ed982b69957ffc57ca0619
-- github/gh-aw/.github/workflows/shared/reporting.md@852cb06ad52958b402ed982b69957ffc57ca0619
+# imports:
+# - github/gh-aw/.github/workflows/shared/mood.md@852cb06ad52958b402ed982b69957ffc57ca0619
+# - github/gh-aw/.github/workflows/shared/reporting.md@852cb06ad52958b402ed982b69957ffc57ca0619
 safe-outputs:
   add-comment: {}
   add-labels:

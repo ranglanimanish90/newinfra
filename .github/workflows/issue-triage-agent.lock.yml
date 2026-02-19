@@ -24,12 +24,7 @@
 #
 # Source: github/gh-aw/.github/workflows/issue-triage-agent.md@852cb06ad52958b402ed982b69957ffc57ca0619
 #
-# Resolved workflow manifest:
-#   Imports:
-#     - github/gh-aw/.github/workflows/shared/mood.md@852cb06ad52958b402ed982b69957ffc57ca0619
-#     - github/gh-aw/.github/workflows/shared/reporting.md@852cb06ad52958b402ed982b69957ffc57ca0619
-#
-# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"ab480bd2ccfb4fa8f0c0c30245055cae2dd378b8f5ab9d9f20f0415ca61d1250"}
+# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"81553944e1cceff3c198309e8ea88559a4e02a6953fffc9e4f202b175ae4b5aa"}
 
 name: "Issue Triage Agent"
 "on":
@@ -155,12 +150,6 @@ jobs:
           GH_AW_PROMPT_EOF
           cat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"
           </system>
-          GH_AW_PROMPT_EOF
-          cat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"
-          {{#runtime-import .github/aw/imports/github/gh-aw/852cb06ad52958b402ed982b69957ffc57ca0619/.github_workflows_shared_mood.md}}
-          GH_AW_PROMPT_EOF
-          cat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"
-          {{#runtime-import .github/aw/imports/github/gh-aw/852cb06ad52958b402ed982b69957ffc57ca0619/.github_workflows_shared_reporting.md}}
           GH_AW_PROMPT_EOF
           cat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"
           {{#runtime-import .github/workflows/issue-triage-agent.md}}
