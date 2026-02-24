@@ -22,7 +22,7 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"7aed4848f99ba1106c3514a0ca6773020119b649bbf3e0ef80da020fab715154"}
+# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"7ab70069478870e7b4d6cf637cef16486bb12fae44004beffa97eec623d7e228"}
 
 name: "Issue Triage Agent"
 "on":
@@ -334,7 +334,7 @@ jobs:
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
           cat > /opt/gh-aw/safeoutputs/config.json << 'GH_AW_SAFE_OUTPUTS_CONFIG_EOF'
-          {"add_comment":{"max":1},"add_labels":{"allowed":["bug","feature","enhancement","documentation","question","help-wanted","good-first-issue"],"max":3},"missing_data":{},"missing_tool":{},"noop":{"max":1}}
+          {"add_comment":{"max":1},"add_labels":{"allowed":["bug","feature","enhancement","documentation","question","help-wanted","good-first-issue","community"],"max":3},"missing_data":{},"missing_tool":{},"noop":{"max":1}}
           GH_AW_SAFE_OUTPUTS_CONFIG_EOF
           cat > /opt/gh-aw/safeoutputs/tools.json << 'GH_AW_SAFE_OUTPUTS_TOOLS_EOF'
           [
@@ -360,7 +360,7 @@ jobs:
               "name": "add_comment"
             },
             {
-              "description": "Add labels to an existing GitHub issue or pull request for categorization and filtering. Labels must already exist in the repository. For creating new issues with labels, use create_issue with the labels property instead. CONSTRAINTS: Only these labels are allowed: [bug feature enhancement documentation question help-wanted good-first-issue].",
+              "description": "Add labels to an existing GitHub issue or pull request for categorization and filtering. Labels must already exist in the repository. For creating new issues with labels, use create_issue with the labels property instead. CONSTRAINTS: Only these labels are allowed: [bug feature enhancement documentation question help-wanted good-first-issue community].",
               "inputSchema": {
                 "additionalProperties": false,
                 "properties": {
@@ -1018,7 +1018,7 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         env:
           GH_AW_AGENT_OUTPUT: ${{ env.GH_AW_AGENT_OUTPUT }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"max\":1},\"add_labels\":{\"allowed\":[\"bug\",\"feature\",\"enhancement\",\"documentation\",\"question\",\"help-wanted\",\"good-first-issue\"]},\"missing_data\":{},\"missing_tool\":{}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"max\":1},\"add_labels\":{\"allowed\":[\"bug\",\"feature\",\"enhancement\",\"documentation\",\"question\",\"help-wanted\",\"good-first-issue\",\"community\"]},\"missing_data\":{},\"missing_tool\":{}}"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |

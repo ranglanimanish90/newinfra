@@ -15,6 +15,7 @@ safe-outputs:
     - question
     - help-wanted
     - good-first-issue
+    - community
 strict: true
 timeout-minutes: 5
 tools:
