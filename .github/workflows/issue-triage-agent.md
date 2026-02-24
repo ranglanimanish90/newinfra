@@ -24,6 +24,7 @@ tools:
     toolsets:
     - issues
     - labels
+source: workflows/issue-triage-agent.md
 engine: copilot
 ---
 
